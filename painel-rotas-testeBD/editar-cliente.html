@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Cadastrar cliente</title>
+
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+
+<body>
+
+
+<h1>Cadastrar cliente</h1>
+
+<input id="nome" placeholder="Nome completo" required="">
+
+<input id="apelido" placeholder="Conhecido como">
+
+<input id="telefone" placeholder="Telefone">
+
+<input id="cidade" placeholder="Cidade">
+
+<input type="text" id="bairro" placeholder="Bairro" readonly>
+
+<input id="numero" placeholder="Número">
+
+<input type="number" id="rg" placeholder="número do RG">
+<input
+    type="text"
+    id="cpf"
+    placeholder="CPF"
+    maxlength="14"
+>
+<input id="nomeMae" placeholder="Nome da mãe">
+<label for="dataNascimento">📅 Data de nascimento</label>
+<input 
+id="dataNascimento" 
+type="date">
+
+
+<label for="dataVencimento">💰 Data de vencimento da compra</label>
+<input 
+id="dataVencimento" 
+type="date">
+
+
+
+<h2>🏠 Endereço</h2>
+
+
+<input id="rua" placeholder="Rua">
+
+
+<input id="frente" placeholder="Referência frente">
+
+
+<input id="direita" placeholder="Referência direita">
+
+
+<input id="esquerda" placeholder="Referência esquerda">
+
+
+<input id="cor" placeholder="Cor da casa">
+
+
+
+<h2>🔍 Observações</h2>
+
+
+<textarea id="obs"></textarea>
+
+<script>
+
+let bairro = new URLSearchParams(location.search)
+.get("bairro");
+
+
+if(bairro){
+
+document.getElementById("bairro").value = bairro;
+
+}
+
+</script>
+
+<button onclick="salvarCliente()">
+
+Salvar
+
+</button>
+
+
+
+<script src="clientes.js"></script>
+
+
+</body>
+
+</html>

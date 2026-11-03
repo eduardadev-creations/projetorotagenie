@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Painel de Rotas</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div id="login">
+        <div class="caixaLogin">
+            <h2>Senha</h2>
+            <input id="senha" type="password">
+            <button onclick="entrar()">Entrar</button>
+            <p id="erro"></p>
+            <a href="pagCliente.html"
+   style="
+      display:block;
+      text-align:center;
+      color:#4b5563;
+      font-weight:700;
+      text-decoration:none;
+      margin:15px 0;
+   ">Sou Cliente</a>
+        </div>
+    </div>
+
+    <div id="painel">
+        <h1>Painel de Rotas</h1>
+
+        <input id="pesquisa" placeholder="Pesquisar bairro">
+
+        <div id="rotas"></div>
+
+        <button onclick="adicionarRota()" class="btnAdicionar">
+            ➕ Adicionar Rota
+        </button>
+
+        <h2>Rotas retiradas</h2>
+        <div id="retiradas"></div>
+
+        <h2>Bairros retirados</h2>
+        <div id="bairrosRetirados"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

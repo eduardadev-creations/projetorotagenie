@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Ficha de Entrega</title>
+
+    <link rel="stylesheet" href="ficha-impressao.css">
+
+</head>
+
+<body>
+
+    <div class="pagina">
+
+        <!-- CABEÇALHO -->
+
+        <header class="cabecalho">
+
+            <div>
+
+                <h1 class="empresa">J&F Distribuidora</h1>
+
+                <p class="equipe">
+                    Equipe: <strong>Jarbas</strong>
+                </p>
+
+            </div>
+
+            <div class="data">
+
+                <strong>Data:</strong>
+
+                <span id="dataAtual"></span>
+              <td>
+        <strong>Vencimento:</strong>
+        <span id="dataVencimento"></span>
+    </td>
+
+            </div>
+
+        </header>
+
+        <!-- DADOS DA CLIENTE -->
+
+        <section class="dados">
+
+            <table>
+
+                <tr>
+
+                    <td colspan="2">
+                        <strong>Nome:</strong>
+                        <span id="nome"></span>
+                    </td>
+
+                    <td>
+                        <strong>Conhecido(a) como:</strong>
+                        <span id="apelido"></span>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <strong>Telefone:</strong>
+                        <span id="telefone"></span>
+                    </td>
+
+                    <td>
+                        <strong>Cidade:</strong>
+                        <span id="cidade"></span>
+                    </td>
+
+                    <td>
+                        <strong>Bairro:</strong>
+                        <span id="bairro"></span>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td colspan="2">
+                        <strong>Rua:</strong>
+                        <span id="rua"></span>
+                    </td>
+
+                    <td>
+                        <strong>Número:</strong>
+                        <span id="numero"></span>
+                    </td>
+                    
+                    <tr>
+
+    <td>
+        <strong>RG:</strong>
+        <span id="rg"></span>
+    </td>
+    <td>
+      <strong>CPF:</strong>
+      <span id="cpf"></span>
+    </td>
+    <td>
+        <strong>Nome da mãe:</strong>
+        <span id="nomeMae"></span>
+    </td>
+
+    <td>
+        <strong>Nascimento:</strong>
+        <span id="dataNascimento"></span>
+    </td>
+
+</tr>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+        <!-- REFERÊNCIAS -->
+
+        <section class="referencias">
+
+            <h2>Referências</h2>
+
+            <table>
+
+                <tr>
+
+                    <td>
+                        <strong>Frente:</strong>
+                        <span id="frente"></span>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <strong>Direita:</strong>
+                        <span id="direita"></span>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <strong>Esquerda:</strong>
+                        <span id="esquerda"></span>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <strong>Cor da Casa:</strong>
+                        <span id="cor"></span>
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+        <!-- PRODUTOS -->
+
+        <section class="produtos">
+
+            <h2>Produtos</h2>
+
+            <table class="tabela-produtos">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Produto</th>
+
+                        <th>Qtd</th>
+
+                        <th>Valor</th>
+
+                        <th>Subtotal</th>
+
+                        <th>Total</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="listaProdutos">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- TOTAL -->
+
+        <section class="rodape">
+
+            <h2>
+
+                Total a Pagar:
+<span id="totalLiquido">R$ 0,00</span>
+
+<br>
+
+Total Bruto:
+<span id="totalBruto">R$ 0,00</span>
+
+            </h2>
+
+            <div class="assinatura">
+
+                ______________________________________
+
+                <br>
+
+                Assinatura da Cliente
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Botão (não será impresso) -->
+
+    <div class="acoes">
+
+        <button onclick="window.print()">
+
+            🖨️ Imprimir / Salvar em PDF
+
+        </button>
+
+    </div>
+
+    <script src="ficha-impressao.js"></script>
+
+</body>
+
+</html>

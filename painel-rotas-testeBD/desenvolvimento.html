@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Em desenvolvimento | J&F Distribuidora</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        :root {
+            --azul: #0757d9;
+            --azul-escuro: #03195c;
+            --azul-claro: #2da4ff;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eaf3ff,
+                    #ffffff
+                );
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 25px;
+
+            overflow: hidden;
+        }
+
+
+        .container {
+
+            width: min(850px, 100%);
+
+            min-height: 620px;
+
+            background: white;
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, .12);
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 50px 30px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        /* NUVENS */
+
+        .nuvem {
+
+            position: absolute;
+
+            background: white;
+
+            border-radius: 50%;
+
+            opacity: .8;
+
+            box-shadow:
+                40px 0 white,
+                80px 10px white;
+        }
+
+
+        .nuvem-1 {
+
+            width: 70px;
+            height: 30px;
+
+            top: 80px;
+            left: -20px;
+        }
+
+
+        .nuvem-2 {
+
+            width: 90px;
+            height: 35px;
+
+            top: 180px;
+            right: -30px;
+        }
+
+
+        .nuvem-3 {
+
+            width: 60px;
+            height: 25px;
+
+            bottom: 100px;
+            left: 40px;
+        }
+
+
+        /* AVIÃO */
+
+        .aviao {
+
+            font-size: 100px;
+
+            animation:
+                subirDescer 2.5s ease-in-out infinite;
+
+            position: relative;
+
+            z-index: 2;
+
+            margin-bottom: 30px;
+        }
+
+
+        @keyframes subirDescer {
+
+            0% {
+
+                transform:
+                    translateY(15px)
+                    rotate(-5deg);
+
+            }
+
+            50% {
+
+                transform:
+                    translateY(-35px)
+                    rotate(5deg);
+
+            }
+
+            100% {
+
+                transform:
+                    translateY(15px)
+                    rotate(-5deg);
+
+            }
+
+        }
+
+
+        /* TEXTO */
+
+        h1 {
+
+            color: var(--azul-escuro);
+
+            font-size: 48px;
+
+            margin-bottom: 20px;
+        }
+
+
+        h1 span {
+
+            color: var(--azul);
+        }
+
+
+        p {
+
+            color: #555;
+
+            font-size: 20px;
+
+            line-height: 1.6;
+
+            max-width: 600px;
+
+            margin-bottom: 35px;
+        }
+
+
+        /* BARRA DE PROGRESSO */
+
+        .progresso {
+
+            width: min(500px, 90%);
+
+            height: 14px;
+
+            background: #e2e7f0;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            margin-bottom: 35px;
+        }
+
+
+        .barra {
+
+            width: 65%;
+
+            height: 100%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--azul),
+                    var(--azul-claro)
+                );
+
+            border-radius: 20px;
+
+            animation: carregando 2s ease-in-out infinite alternate;
+        }
+
+
+        @keyframes carregando {
+
+            from {
+                width: 45%;
+            }
+
+            to {
+                width: 75%;
+            }
+
+        }
+
+
+        /* BOTÃO */
+
+        .voltar {
+
+            display: inline-block;
+
+            padding: 15px 35px;
+
+            border-radius: 30px;
+
+            background: var(--azul);
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            transition: .3s ease;
+        }
+
+
+        .voltar:hover {
+
+            background: var(--azul-escuro);
+
+            transform: translateY(-3px);
+        }
+
+
+        .marca {
+
+            position: absolute;
+
+            bottom: 25px;
+
+            color: #777;
+
+            font-size: 14px;
+        }
+
+
+        /* CELULAR */
+
+        @media (max-width: 600px) {
+
+
+            .container {
+
+                min-height: 560px;
+
+                padding: 35px 20px;
+
+                border-radius: 22px;
+            }
+
+
+            .aviao {
+
+                font-size: 75px;
+            }
+
+
+            h1 {
+
+                font-size: 34px;
+            }
+
+
+            p {
+
+                font-size: 16px;
+            }
+
+
+            .voltar {
+
+                padding: 13px 28px;
+
+                font-size: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <main class="container">
+
+
+        <div class="nuvem nuvem-1"></div>
+
+        <div class="nuvem nuvem-2"></div>
+
+        <div class="nuvem nuvem-3"></div>
+
+
+        <div class="aviao">
+            ✈️
+        </div>
+
+
+        <h1>
+            Página em <span>desenvolvimento</span>
+        </h1>
+
+
+        <p>
+
+            Estamos preparando tudo com muito cuidado
+            para oferecer a melhor experiência para você.
+
+            <br>
+
+            Em breve teremos novidades!
+
+        </p>
+
+
+        <div class="progresso">
+
+            <div class="barra"></div>
+
+        </div>
+
+
+        <a
+            href="index.html"
+            class="voltar"
+        >
+
+            ← Voltar para o início
+
+        </a>
+
+
+        <div class="marca">
+
+            J&F Distribuidora
+
+        </div>
+
+
+    </main>
+
+
+</body>
+
+</html>

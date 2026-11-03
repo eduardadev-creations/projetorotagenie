@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ficha do Cliente</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="topo-ficha">
+
+    <h1>📄 Ficha do Cliente</h1>
+
+</header>
+
+<main>
+
+    <div id="ficha"></div>
+
+    <div class="acoes-ficha">
+
+     <button onclick="window.open(`ficha-impressao.html?nome=${encodeURIComponent(cliente.nome)}`);">🖨️ Gerar PDF</button>
+
+    </div>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script src="ficha.js"></script>
+
+</body>
+
+</html>

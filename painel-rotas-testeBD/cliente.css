@@ -1,0 +1,786 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --principal: #0757d9;
+    --azul-claro: #2da4ff;
+    --escuro: #03195c;
+    --texto: #061b5b;
+    --fundo: #ffffff;
+}
+
+body {
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+        CABEÇALHO
+========================= */
+
+.top {
+    min-height: 228px;
+    background: linear-gradient(
+        135deg,
+        #073fb5,
+        #0641bd,
+        #062c91
+    );
+
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.top-inner {
+    width: min(920px, calc(100% - 48px));
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+.brand-logo {
+    width: 170px;
+    height: 170px;
+    object-fit: contain;
+}
+
+
+.brand h1 {
+    color: white;
+    font-size: 56px;
+    line-height: 1;
+}
+
+
+.brand h2 {
+    color: white;
+    font-size: 24px;
+    letter-spacing: 7px;
+    margin-top: 10px;
+}
+
+
+.brand p {
+    color: var(--azul-claro);
+    font-size: 18px;
+    margin-top: 12px;
+}
+
+
+/* =========================
+          NAV
+========================= */
+
+.nav {
+    height: 100px;
+    background: var(--escuro);
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+}
+
+
+.nav-inner {
+    width: min(1100px, 100%);
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+.nav-item {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* REMOVE O UNDERLINE DOS LINKS */
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.nav-item a:hover {
+    color: var(--azul-claro);
+    text-decoration: none;
+}
+
+
+/* =========================
+          CONTEÚDO
+========================= */
+
+.main {
+    padding: 42px 24px 30px;
+}
+
+
+.section-title {
+    text-align: center;
+
+    font-family: Georgia, serif;
+    font-size: 54px;
+    font-weight: normal;
+
+    margin-bottom: 58px;
+}
+
+
+.section-title::after {
+    content: "✦";
+
+    display: block;
+
+    color: var(--principal);
+
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+
+    width: 190px;
+
+    margin: 14px auto 0;
+
+    border-top: 3px solid var(--principal);
+}
+
+
+/* =========================
+          CARDS
+========================= */
+
+.cards-wrap {
+    width: min(1200px, 100%);
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 0 20px;
+}
+
+
+.cards {
+    flex: 1;
+
+    display: flex;
+
+    gap: 30px;
+
+    overflow-x: auto;
+
+    scroll-behavior: smooth;
+
+    scroll-snap-type: x mandatory;
+
+    padding: 20px 10px 30px;
+
+    scrollbar-width: none;
+}
+
+
+.cards::-webkit-scrollbar {
+    display: none;
+}
+
+
+.card-link {
+    flex: 0 0 340px;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    scroll-snap-align: center;
+}
+
+
+.card {
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid #d8dce6;
+
+    border-radius: 20px;
+
+    background: white;
+
+    text-align: center;
+
+    padding-bottom: 28px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+
+    transition: .3s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 12px 28px rgba(0,0,0,.18);
+}
+
+
+.card img {
+    width: 100%;
+
+    height: 290px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.badge {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    background: var(--principal);
+
+    border: 5px solid white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+
+    top: 255px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 30px;
+}
+
+
+.card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    font-weight: normal;
+
+    margin-top: 45px;
+
+    margin-bottom: 12px;
+}
+
+
+.card p {
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    color: #555;
+
+    padding: 0 15px;
+}
+
+
+/* =========================
+          SETAS
+========================= */
+
+.arrow {
+    flex: 0 0 65px;
+
+    width: 65px;
+    height: 65px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--principal);
+
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .3s ease;
+}
+
+
+.arrow:hover {
+    background: #0646ad;
+
+    transform: scale(1.1);
+}
+
+
+/* =========================
+          BOLINHAS
+========================= */
+
+.dots {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 35px 0 45px;
+}
+
+
+.dot {
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    background: #d8dbe0;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+
+.dot:hover {
+    transform: scale(1.2);
+}
+
+
+.dot.active {
+    background: var(--principal);
+
+    transform: scale(1.25);
+}
+
+
+/* =========================
+          CONTATO
+========================= */
+
+.contact {
+    width: min(860px, 100%);
+    margin: auto;
+
+    background: #f2f6ff;
+
+    border-radius: 22px;
+
+    padding: 34px 70px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 40px;
+}
+
+
+.headset {
+    width: 150px;
+    height: 150px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 70px;
+}
+
+
+.contact h2 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+
+.phone {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+
+.phone::before {
+    content: "☎";
+
+    color: var(--principal);
+
+    margin-right: 14px;
+}
+
+
+.contact p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.35;
+}
+
+
+/* =========================
+          RODAPÉ
+========================= */
+
+footer {
+    margin-top: 38px;
+
+    min-height: 115px;
+
+    background: var(--escuro);
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.footer-inner {
+    width: min(920px, calc(100% - 48px));
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+.footer-logo {
+    width: 95px;
+    height: 95px;
+
+    object-fit: contain;
+}
+
+
+.footer-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.footer-sub {
+    color: var(--azul-claro);
+    font-size: 17px;
+
+    margin-top: 6px;
+}
+
+
+.thanks {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+.heart {
+    color: #0867ee;
+    font-size: 42px;
+}
+
+
+/* =========================
+          CELULAR
+========================= */
+
+@media (max-width: 700px) {
+
+    .top {
+        min-height: 190px;
+    }
+
+
+    .top-inner {
+        width: calc(100% - 30px);
+        gap: 12px;
+    }
+
+
+    .brand-logo {
+        width: 105px;
+        height: 105px;
+    }
+
+
+    .brand h1 {
+        font-size: 35px;
+    }
+
+
+    .brand h2 {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+
+    .brand p {
+        font-size: 12px;
+    }
+
+
+    .nav {
+        height: auto;
+        padding: 12px 0;
+    }
+
+
+    .nav-inner {
+        width: calc(100% - 20px);
+        gap: 6px;
+    }
+
+
+    .nav-item {
+        font-size: 13px;
+        gap: 5px;
+    }
+
+
+    .icon-circle {
+        width: 28px;
+        height: 28px;
+        font-size: 17px;
+    }
+
+
+    .buy {
+        padding: 12px 10px;
+    }
+
+
+    .main {
+        padding: 30px 12px 20px;
+    }
+
+
+    .section-title {
+        font-size: 39px;
+        margin-bottom: 38px;
+    }
+
+
+    .cards-wrap {
+        gap: 5px;
+    }
+
+
+    .arrow {
+        flex: 0 0 40px;
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 28px;
+    }
+
+
+    .cards {
+        gap: 10px;
+    }
+
+
+    .card-link {
+        flex: 0 0 260px;
+    }
+
+
+    .card img {
+        height: 180px;
+    }
+
+
+    .badge {
+        width: 50px;
+        height: 50px;
+
+        top: 155px;
+
+        font-size: 22px;
+    }
+
+
+    .card h3 {
+        font-size: 19px;
+        margin-top: 32px;
+    }
+
+
+    .card p {
+        font-size: 12px;
+    }
+
+
+    .contact {
+        padding: 20px 16px;
+        gap: 14px;
+    }
+
+
+    .headset {
+        width: 75px;
+        height: 75px;
+
+        font-size: 36px;
+    }
+
+
+    .contact h2 {
+        font-size: 26px;
+    }
+
+
+    .phone {
+        font-size: 19px;
+    }
+
+
+    .contact p {
+        font-size: 11px;
+    }
+
+
+    footer {
+        min-height: 90px;
+    }
+
+
+    .footer-inner {
+        width: calc(100% - 24px);
+        gap: 12px;
+    }
+
+
+    .footer-logo {
+        width: 58px;
+        height: 58px;
+    }
+
+
+    .footer-title {
+        font-size: 14px;
+    }
+
+
+    .footer-sub {
+        font-size: 10px;
+    }
+
+
+    .thanks {
+        font-size: 10px;
+        text-align: center;
+    }
+
+
+    .heart {
+        font-size: 28px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .main {
+        padding: 40px 10px 35px;
+    }
+
+
+    .section-title {
+        margin-bottom: 35px;
+    }
+
+
+    .cards-wrap {
+        padding: 0 8px;
+
+        gap: 8px;
+    }
+
+
+    .cards {
+        gap: 18px;
+
+        padding: 20px 8px 30px;
+    }
+
+
+    .card-link {
+        flex: 0 0 285px;
+    }
+
+
+    .card img {
+        height: 190px;
+    }
+
+
+    .badge {
+        top: 165px;
+    }
+
+
+    .arrow {
+        flex: 0 0 42px;
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 28px;
+    }
+
+
+    .dots {
+        margin: 30px 0 40px;
+    }
+
+}

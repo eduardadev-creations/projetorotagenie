@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<title>Cliente</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+
+<h1 id="nomeCliente">
+Cliente
+</h1>
+
+
+
+<div class="card">
+
+
+<h2>📌 Informações gerais</h2>
+
+<p id="informacoes"></p>
+
+
+
+<h2>🏠 Endereço</h2>
+
+<p id="endereco"></p>
+
+
+
+<h2>🔍 Observações</h2>
+
+<p id="observacoes"></p>
+
+
+
+<button onclick="abrirProdutos()">
+🛒 Ver produtos
+</button>
+
+
+
+<button onclick="editarCliente()">
+✏️ Editar cliente
+</button>
+
+<button onclick="removerCliente(new URLSearchParams(location.search).get('nome'))">
+    🗑️ Remover
+</button>
+
+<button id="btnStatus"></button>
+
+</div>
+
+
+
+<script src="clientes.js"></script>
+<script src="ficha.js"></script>
+
+
+</body>
+
+</html>

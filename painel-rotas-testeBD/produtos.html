@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Produtos</title>
+
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+
+<body>
+
+
+<h1 id="nomeClienteProdutos">
+Produtos
+</h1>
+
+
+
+<div class="card">
+
+
+<h2>Adicionar produto</h2>
+
+
+<input id="produto" placeholder="Nome do produto">
+
+
+<input 
+id="quantidade" 
+type="number" 
+placeholder="Quantidade">
+
+
+<input 
+id="valor" 
+type="number" 
+placeholder="Valor do produto">
+
+
+<input 
+id="subtotal" 
+type="number" 
+placeholder="Valor pago pela cliente">
+
+
+<button onclick="adicionarProduto()">
+
+Adicionar
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>Produtos recentes</h2>
+
+
+
+<div class="tabela">
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>Produto</th>
+
+<th>Quantidade</th>
+
+<th>Valor</th>
+
+<th>Subtotal</th>
+
+<th>Total</th>
+
+<th>Ação</th>
+
+</tr>
+
+</thead>
+
+
+
+<tbody id="listaProdutos">
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+<h2>Total da compra</h2>
+
+
+<h3 id="totalProdutos">
+R$ 0,00
+</h3>
+
+
+</div>
+
+<button onclick="window.location.href = `ficha.html?nome=${encodeURIComponent(nomeCliente)}`;"> 📝 Abrir ficha
+</button>
+
+
+
+<script src="produtos.js"></script>
+
+</body>
+
+</html>
